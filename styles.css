@@ -1,0 +1,37 @@
+/* Style banera cookies */
+#cookieBanner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2d2d2d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+    display: none;
+}
+
+#cookieBanner button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#cookieBanner button:hover {
+    background-color: #45a049;
+}
+
+#cookieBanner a {
+    color: #4CAF50;
+    text-decoration: underline;
+}
+
+#cookieBanner a:hover {
+    text-decoration: none;
+}
