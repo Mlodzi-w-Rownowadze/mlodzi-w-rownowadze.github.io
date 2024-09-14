@@ -1,5 +1,6 @@
 
 title: Młodzi w Równowadze
+email: kontakt@mlodziwrownowadze.live
 description: Strona projektu społecznego Młodzi w Równowadze
 baseurl: ""
 url: "https://www.mlodziwrownowadze.live/"
@@ -7,8 +8,21 @@ author:
   name: "lodyczekoladowe"
   email: "kontakt@mlodziwrownowadze.live"
 
+github_username: mlodzi-w-rownowadze
+
 # Build settings
 markdown: kramdown
-theme: minima
+permalink: /:year/:title:output_ext
+
+sass:
+  load_paths:
+    - "node_modules"
+  style: compressed
+
 plugins:
   - jekyll-feed
+  - ./plugins/date_filter.rb
+
+collections:
+  pages:
+    output: true
