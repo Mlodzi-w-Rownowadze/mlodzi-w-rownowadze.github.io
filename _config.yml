@@ -1,7 +1,14 @@
+
 title: Młodzi w Równowadze
-description: Strona organizacji Młodzi w Równowadze
+description: Strona projektu społecznego Młodzi w Równowadze
 baseurl: ""
 url: "https://www.mlodziwrownowadze.live/"
 author:
   name: "lodyczekoladowe"
   email: "kontakt@mlodziwrownowadze.live"
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
