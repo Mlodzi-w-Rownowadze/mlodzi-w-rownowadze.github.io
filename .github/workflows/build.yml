@@ -1,0 +1,56 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - toDeploy
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Instalacja Node.js (jeśli używasz node_modules)
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      # Zainstaluj zależności z package.json
+      - name: Install dependencies
+        run: npm install
+
+      # Instalacja Ruby
+      - name: Install Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'
+
+      # Instalacja Bundler
+      - name: Install Bundler
+        run: gem install bundler
+
+      # Instalacja Ruby
+      - name: Install SASS and Jekyll
+        run: bundle install
+
+      # Kompilacja SCSS do CSS
+      - name: Compile SCSS
+        run: sass --load-path=node_modules assets/css/main.scss assets/css/main.css
+
+      # Tutaj mogą być inne kroki, np. budowanie projektu Jekyll, etc.
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+
+      # Możesz dodać kroki do wdrażania strony, jeśli to konieczne.
+      - name: Deploy
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "github@github.com"
+          git add .
+          git commit -m "deploy"
+          git push -f origin deploy
