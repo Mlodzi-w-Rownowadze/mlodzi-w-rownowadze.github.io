@@ -25,6 +25,16 @@ jobs:
         run: npm install
 
       # Instalacja Ruby
+      - name: Install Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'
+
+      # Instalacja Bundler
+      - name: Install Bundler
+        run: gem install bundler
+
+      # Instalacja Ruby
       - name: Install SASS and Jekyll
         run: bundle install
 
