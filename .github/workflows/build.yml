@@ -24,6 +24,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      # Instalacja Ruby
+      - name: Install SASS and Jekyll
+        run: bundle install
+
       # Kompilacja SCSS do CSS
       - name: Compile SCSS
         run: sass --load-path=node_modules assets/css/main.scss assets/css/main.css
