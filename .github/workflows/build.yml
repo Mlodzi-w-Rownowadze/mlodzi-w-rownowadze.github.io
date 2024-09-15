@@ -1,0 +1,37 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - deploy
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Instalacja Node.js (jeśli używasz node_modules)
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      # Zainstaluj zależności z package.json
+      - name: Install dependencies
+        run: npm install
+
+      # Kompilacja SCSS do CSS
+      - name: Compile SCSS
+        run: sass --load-path=node_modules assets/css/main.scss assets/css/main.css
+
+      # Tutaj mogą być inne kroki, np. budowanie projektu Jekyll, etc.
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+
+      # Możesz dodać kroki do wdrażania strony, jeśli to konieczne.
+      - name: Deploy
+        run: echo "Deploy logic here"
