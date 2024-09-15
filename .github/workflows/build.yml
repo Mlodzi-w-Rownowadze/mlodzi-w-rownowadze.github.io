@@ -3,7 +3,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - deploy
+      - toDeploy
   pull_request:
 
 jobs:
@@ -48,4 +48,9 @@ jobs:
 
       # Możesz dodać kroki do wdrażania strony, jeśli to konieczne.
       - name: Deploy
-        run: echo "Deploy logic here"
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "github@github.com"
+          git add .
+          git commit -m "deploy"
+          git push -f origin deploy
