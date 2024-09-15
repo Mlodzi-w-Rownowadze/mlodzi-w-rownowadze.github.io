@@ -1,7 +1,7 @@
-
 ---
 layout: default
 title: O Zespole
+permalink: /team
 ---
 # O Zespole
 

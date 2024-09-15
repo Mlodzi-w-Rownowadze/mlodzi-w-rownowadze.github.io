@@ -1,8 +1,8 @@
- 
 ---
 layout: default
-title: O nas
+title: "O nas"
+permalink: /about
 ---
-# O nas
 
-Informacje o naszej organizacji.
+# O nas
+Treść strony "O nas".
