@@ -11,6 +11,7 @@ author:
 github_username: mlodzi-w-rownowadze
 instagram_username: mlodzi.w.rownowadze
 facebook_username: mlodziwrownowadze
+
 # Build settings
 markdown: kramdown
 permalink: /:year/:title:output_ext
