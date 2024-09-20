@@ -1,3 +1,13 @@
-@import "variables";
 
+@import "./variables";
 @import "bootstrap/scss/bootstrap";
+
+body.light-mode {
+  background-color: var(--background-light);
+  color: var(--primary-light);
+}
+
+body.dark-mode {
+  background-color: var(--background-dark);
+  color: var(--primary-dark);
+}
