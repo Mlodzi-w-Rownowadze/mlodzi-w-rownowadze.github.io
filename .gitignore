@@ -19,3 +19,5 @@ _site/
 Gemfile.lock
 
 package-lock.json
+/assets/sass/bootstrap/dist/css
+/assets/sass/bootstrap/dist/js
