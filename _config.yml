@@ -10,19 +10,14 @@ author:
 github_username: mlodzi-w-rownowadze
 instagram_username: mlodzi.w.rownowadze
 facebook_username: mlodziwrownowadze
-
 # Build settings
 markdown: kramdown
 permalink: /:year/:title:output_ext
 
 sass:
-  load_paths:
-    - "node_modules"
-  sass_dir: assets/css
   style: compressed
-  input: assets/css/main.scss
-  output: assets/css/main.css
-
+  input: /assets/scss/_main.scss
+  output: /assets/css/main.css
 
 plugins:
   - jekyll-feed
