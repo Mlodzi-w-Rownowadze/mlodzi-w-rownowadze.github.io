@@ -10,7 +10,7 @@ import EventHandler from './dom/event-handler.js'
 import SelectorEngine from './dom/selector-engine.js'
 import {
   defineJQueryPlugin, getElement, isDisabled, isVisible
-} from './util/index.js'
+} from './util'
 
 /**
  * Constants

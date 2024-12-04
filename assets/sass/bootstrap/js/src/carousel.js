@@ -16,7 +16,7 @@ import {
   isVisible,
   reflow,
   triggerTransitionEnd
-} from './util/index.js'
+} from './util'
 import Swipe from './util/swipe.js'
 
 /**
