@@ -15,7 +15,7 @@ import {
   defineJQueryPlugin,
   isDisabled,
   isVisible
-} from './util/index.js'
+} from './util'
 import ScrollBarHelper from './util/scrollbar.js'
 
 /**
