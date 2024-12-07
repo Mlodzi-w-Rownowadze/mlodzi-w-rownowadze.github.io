@@ -20,7 +20,7 @@ import {
   isRTL,
   isVisible,
   noop
-} from './util'
+} from './util/index.js'
 
 /**
  * Constants

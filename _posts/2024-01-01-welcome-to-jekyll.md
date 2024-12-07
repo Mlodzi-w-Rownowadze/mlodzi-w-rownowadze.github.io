@@ -8,4 +8,4 @@ categories: jekyll update
 
 ## You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.
 
-![Image](/assets/images/logo-navbar.png "a title")
+<img alt="Image" height="40" src="/assets/images/logo-navbar.png" title="a title" width="40"/>
