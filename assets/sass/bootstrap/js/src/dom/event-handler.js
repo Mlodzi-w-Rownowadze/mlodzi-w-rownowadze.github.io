@@ -5,7 +5,7 @@
  * --------------------------------------------------------------------------
  */
 
-import { getjQuery } from '../util'
+import { getjQuery } from '../util/index.js'
 
 /**
  * Constants

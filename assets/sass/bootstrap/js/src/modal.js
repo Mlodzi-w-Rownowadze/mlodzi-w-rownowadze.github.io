@@ -13,7 +13,7 @@ import { enableDismissTrigger } from './util/component-functions.js'
 import FocusTrap from './util/focustrap.js'
 import {
   defineJQueryPlugin, isRTL, isVisible, reflow
-} from './util'
+} from './util/index.js'
 import ScrollBarHelper from './util/scrollbar.js'
 
 /**
