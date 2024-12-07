@@ -33,37 +33,42 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Install dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y git build-essential libssl-dev libreadline-dev zlib1g-dev
-
-      - name: Install ruby-build
-        run: |
-          git clone https://github.com/rbenv/ruby-build.git
-          cd ruby-build
-          sudo ./install.sh
-
-      - name: Install Ruby 3.1.4
-        run: |
-          sudo ruby-build 3.1.4 /opt/hostedtoolcache/Ruby/3.1.4/x64
-          sudo touch /opt/hostedtoolcache/Ruby/3.1.4/x64.complete
-
       - name: Setup Ruby
         uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217c42 # v1.161.0
         with:
           ruby-version: '3.1' # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 0 # Increment this number if you need to re-download cached gems
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install Node.js dependencies
+        run: npm install
+
+      - name: Copy Bootstrap and Bootstrap Icons
+        run: |
+          mkdir -p assets/vendor
+          cp -r node_modules/bootstrap assets/vendor/bootstrap
+          cp -r node_modules/bootstrap-icons assets/vendor/bootstrap-icons
+          mkdir -p assets/css/fonts
+          cp node_modules/bootstrap-icons/font/fonts/* assets/css/fonts/
+
+      - name: Compile SCSS
+        run: npx node-sass assets/scss/_main.scss assets/css/main.css
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
