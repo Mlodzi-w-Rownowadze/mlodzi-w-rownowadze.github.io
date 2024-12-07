@@ -12,7 +12,7 @@ import {
   defineJQueryPlugin,
   getElement,
   reflow
-} from './util'
+} from './util/index.js'
 
 /**
  * Constants
