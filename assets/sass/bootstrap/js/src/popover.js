@@ -6,7 +6,7 @@
  */
 
 import Tooltip from './tooltip.js'
-import { defineJQueryPlugin } from './util'
+import { defineJQueryPlugin } from './util/index.js'
 
 /**
  * Constants

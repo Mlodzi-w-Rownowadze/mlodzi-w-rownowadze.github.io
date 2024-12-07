@@ -8,7 +8,7 @@
 import BaseComponent from './base-component.js'
 import EventHandler from './dom/event-handler.js'
 import { enableDismissTrigger } from './util/component-functions.js'
-import { defineJQueryPlugin, reflow } from './util'
+import { defineJQueryPlugin, reflow } from './util/index.js'
 
 /**
  * Constants
