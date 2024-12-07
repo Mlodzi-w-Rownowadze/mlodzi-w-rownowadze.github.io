@@ -33,6 +33,23 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y git build-essential libssl-dev libreadline-dev zlib1g-dev
+
+      - name: Install ruby-build
+        run: |
+          git clone https://github.com/rbenv/ruby-build.git
+          cd ruby-build
+          sudo ./install.sh
+
+      - name: Install Ruby 3.1.4
+        run: |
+          sudo ruby-build 3.1.4 /opt/hostedtoolcache/Ruby/3.1.4/x64
+          sudo touch /opt/hostedtoolcache/Ruby/3.1.4/x64.complete
+        
       - name: Setup Ruby
         uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217c42 # v1.161.0
         with:
