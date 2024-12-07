@@ -19,3 +19,6 @@ _site/
 Gemfile.lock
 
 package-lock.json
+
+assets/vendor/
+assets/css/
