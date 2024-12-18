@@ -70,8 +70,8 @@ jobs:
           mkdir -p assets/vendor
           cp -r node_modules/bootstrap assets/vendor/bootstrap
           cp -r node_modules/bootstrap-icons assets/vendor/bootstrap-icons
-          mkdir -p assets/css/fonts
-          cp node_modules/bootstrap-icons/font/fonts/* assets/css/fonts/
+          mkdir -p assets/css
+          cp node_modules/bootstrap-icons/font/fonts assets/css/fonts
 
       - name: Compile SCSS
         run: npx node-sass assets/scss/_main.scss assets/css/main.css
