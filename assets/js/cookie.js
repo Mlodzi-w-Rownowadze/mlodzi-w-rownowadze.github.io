@@ -21,13 +21,14 @@ function setCookieConsent(consent) {
 document.addEventListener('DOMContentLoaded', () => {
     window.dataLayer = window.dataLayer || [];
 
+    gtag('js', new Date());
+    gtag('config', 'G-YH8CEX5PPS');
+
     const getStoredCookieConsent = () => localStorage.getItem('cookieConsent')
+
     const setStoredCookieConsent = (consent) => localStorage.setItem('cookieConsent', consent)
 
     setCookieConsent(getStoredCookieConsent());
-
-    gtag('js', new Date());
-    gtag('config', 'G-YH8CEX5PPS');
 
     if (!getStoredCookieConsent()) {
         setTimeout(() =>   {
@@ -43,6 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         myModal.hide();
                     });
                 })
-        }, 2000);
+        }, 0);
     }
 });
