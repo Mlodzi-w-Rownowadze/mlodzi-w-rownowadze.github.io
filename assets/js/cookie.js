@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.dataLayer = window.dataLayer || [];
 
     gtag('js', new Date());
-    gtag('config', 'G-YH8CEX5PPS');
+    gtag('config', 'G-1SMKKF18WE');
 
     const getStoredCookieConsent = () => localStorage.getItem('cookieConsent')
 
