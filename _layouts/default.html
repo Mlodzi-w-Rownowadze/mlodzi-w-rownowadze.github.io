@@ -7,12 +7,20 @@
     <link rel="icon" href="{{ '/assets/images/favicon.png' | relative_url }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="90858890-7e4c-420a-a77e-f9e3dcf12a03"
-            data-blockingmode="auto" type="text/javascript"></script>
-    {% include analytics.html %}
+    <script src="{{ '/assets/js/cookie.js' | relative_url }}"></script>
+    <script async src="//www.googletagmanager.com/gtag/js?id=G-1SMKKF18WE"></script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WCW3LD2J');</script>
 </head>
 <body>
-
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-WCW3LD2J"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+{% include cookies.html %}
 
 <header class="navbar navbar-expand-lg bd-navbar sticky-top">
     {% include header.html %}
@@ -26,8 +34,6 @@
     {% include footer.html %}
 </footer>
 
-<script id="CookieDeclaration" src="https://consent.cookiebot.com/90858890-7e4c-420a-a77e-f9e3dcf12a03/cd.js"
-        type="text/javascript" async></script>
 <script src="{{ '/assets/vendor/bootstrap/dist/js/bootstrap.bundle.js' | relative_url }}"></script>
 </body>
 </html>
