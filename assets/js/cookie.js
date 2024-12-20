@@ -9,19 +9,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const setStoredCookieConsent = (consent) => localStorage.setItem('cookieConsent', consent)
 
     if (!getStoredCookieConsent()) {
+        setTimeout(() =>   {
+            const myModal = new bootstrap.Modal(document.getElementById('cookie'));
+            myModal.show();
 
-        const myModal = new bootstrap.Modal(document.getElementById('cookie'));
-        myModal.show();
-
-        document.querySelectorAll('[data-bs-cookie-value]')
-            .forEach(element => {
-                element.addEventListener('click', () => {
-                    const consent = element.getAttribute('data-bs-cookie-value');
-                    setStoredCookieConsent(consent);
-                    setCookieConsent(consent);
-                    myModal.hide();
-                });
-            })
+            document.querySelectorAll('[data-bs-cookie-value]')
+                .forEach(element => {
+                    element.addEventListener('click', () => {
+                        const consent = element.getAttribute('data-bs-cookie-value');
+                        setStoredCookieConsent(consent);
+                        setCookieConsent(consent);
+                        myModal.hide();
+                    });
+                })
+        }, 5000);
     } else {
         setCookieConsent(getStoredCookieConsent());
     }
