@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     gtag('config', 'G-1SMKKF18WE');
 
     const getStoredCookieConsent = () => localStorage.getItem('cookieConsent')
+
     const setStoredCookieConsent = (consent) => localStorage.setItem('cookieConsent', consent)
 
     setCookieConsent(getStoredCookieConsent());
