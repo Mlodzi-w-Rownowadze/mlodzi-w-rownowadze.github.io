@@ -30,9 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setCookieConsent(getStoredCookieConsent());
 
-    gtag('js', new Date());
-    gtag('config', 'G-YH8CEX5PPS');
-
     if (!getStoredCookieConsent()) {
         setTimeout(() =>   {
             const myModal = new bootstrap.Modal(document.getElementById('cookie'));
