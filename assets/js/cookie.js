@@ -1,12 +1,33 @@
+
+function gtag() {
+    dataLayer.push(arguments);
+}
+
 function setCookieConsent(consent) {
-    gtag('consent', 'update', {
+    if (consent === 'denied' || consent === 'granted') {
+        gtag('consent', 'update', {
             'analytics_storage': consent
-    })
+        })
+    } else {
+        gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'analytics_storage': 'denied'
+        });
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    window.dataLayer = window.dataLayer || [];
+
     const getStoredCookieConsent = () => localStorage.getItem('cookieConsent')
     const setStoredCookieConsent = (consent) => localStorage.setItem('cookieConsent', consent)
+
+    setCookieConsent(getStoredCookieConsent());
+
+    gtag('js', new Date());
+    gtag('config', 'G-YH8CEX5PPS');
 
     if (!getStoredCookieConsent()) {
         setTimeout(() =>   {
@@ -22,8 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         myModal.hide();
                     });
                 })
-        }, 5000);
-    } else {
-        setCookieConsent(getStoredCookieConsent());
+        }, 2000);
     }
 });
