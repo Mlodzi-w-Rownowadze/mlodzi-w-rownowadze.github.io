@@ -4,13 +4,13 @@
   "description": "Młodzi w Równowadze project",
   "main": "index.html",
   "scripts": {
-    "install": "bundle install && npm install && mkdir -p assets/vendor && cp -r node_modules/bootstrap assets/vendor/bootstrap && cp -r node_modules/bootstrap-icons assets/vendor/bootstrap-icons && mkdir -p assets/css && cp -r node_modules/bootstrap-icons/font/fonts assets/css/fonts",
+    "initial": "bundle install && npm install && mkdir -p assets/vendor && cp -r node_modules/bootstrap assets/vendor/bootstrap && cp -r node_modules/bootstrap-icons assets/vendor/bootstrap-icons && mkdir -p assets/css && cp -r node_modules/bootstrap-icons/font/fonts assets/css/fonts",
     "start": "bundle exec jekyll serve"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
-    "sass": "^1.83.0"
+    "sass": "^1.83a.0"
   },
   "keywords": [
     "jekyll",
