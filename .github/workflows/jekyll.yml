@@ -56,8 +56,8 @@ jobs:
       - name: Copy Bootstrap and Bootstrap Icons
         run: |
           mkdir -p assets/vendor
-          cp node_modules/bootstrap assets/vendor/bootstrap
-          cp node_modules/bootstrap-icons assets/vendor/bootstrap-icons
+          cp -r node_modules/bootstrap assets/vendor/bootstrap
+          cp -r node_modules/bootstrap-icons assets/vendor/bootstrap-icons
           mkdir -p assets/css
           cp -r node_modules/bootstrap-icons/font/fonts assets/css/fonts
 
