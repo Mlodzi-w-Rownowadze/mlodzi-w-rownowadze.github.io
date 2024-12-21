@@ -53,6 +53,9 @@ jobs:
       - name: Install Node.js dependencies
         run: npm install
 
+      - name: Install sass
+        run: npm install sass -g
+
       - name: Copy Bootstrap and Bootstrap Icons
         run: |
           mkdir -p assets/vendor
@@ -62,7 +65,7 @@ jobs:
           cp -r node_modules/bootstrap-icons/font/fonts assets/css/fonts
 
       - name: Compile SCSS
-        run: sass assets/scss/_main.scss assets/css/main.css
+        run: npx sass assets/scss/_main.scss assets/css/main.css
 
       - name: Setup Pages
         id: pages

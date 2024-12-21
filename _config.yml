@@ -20,8 +20,8 @@ permalink: /:year/:title:output_ext
 
 sass:
   style: compressed
-  input: /assets/scss/_main.scss
-  output: /assets/css/main.css
+  input: assets/scss/_main.scss
+  output: assets/css/main.css
 
 plugins:
   - jekyll-feed
