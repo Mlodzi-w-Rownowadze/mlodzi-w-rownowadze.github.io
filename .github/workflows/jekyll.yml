@@ -62,7 +62,7 @@ jobs:
           cp node_modules/bootstrap-icons/font/fonts assets/css/fonts
 
       - name: Compile SCSS
-        run: npx node-sass assets/scss/_main.scss assets/css/main.css
+        run: sass assets/scss/_main.scss assets/css/main.css
 
       - name: Setup Pages
         id: pages
