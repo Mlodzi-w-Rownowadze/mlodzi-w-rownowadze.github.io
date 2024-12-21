@@ -1,10 +1,30 @@
-<div class="container">
-    <span class="text-muted">© 2024 Młodzi w Równowadze</span>
+<div class="col-md-4 d-flex align-items-center">
+    <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+        <img src="/assets/images/logo-navbar.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+    </a>
+    <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Młodzi w Równowadze</span>
 </div>
+
+<ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+    <li class="ms-3"><a class="text-body-secondary" href="//www.instagram.com/{{ site.instagram_username }}/">
+        <i class="bi bi-instagram" width="24" height="24"></i>
+    </a></li>
+    <li class="ms-3"><a class="text-body-secondary" href="//www.facebook.com/{{ site.facebook_username }}/">
+        <i class="bi bi-facebook" width="24" height="24"></i>
+    </a></li>
+    <li class="ms-3"><a class="text-body-secondary" href="//www.linkedin.com/company/{{ site.linkedin_username }}/">
+        <i class="bi bi-linkedin" width="24" height="24"></i>
+    </a></li>
+    <li class="ms-3"><a class="text-body-secondary" href="//linktr.ee/{{ site.linktree_username }}/">
+        <img src="https://cdn.brandfetch.io/id_tNIm05N/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B">
+    </a></li>
+</ul>
+
 
 <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
     <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
-            aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (dark)" style="background-color: var(--bs-body-bg)">
+            aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (dark)"
+            style="background-color: var(--bs-body-bg)">
         <i class="bi bi-moon-stars-fill" width="1em" height="1em"></i>
         <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
     </button>

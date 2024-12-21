@@ -8,9 +8,12 @@ author:
   name: "lodyczekoladowe"
   email: "kontakt@mlodziwrownowadze.live"
 
-github_username: mlodzi-w-rownowadze
-instagram_username: mlodzi.w.rownowadze
-facebook_username: mlodziwrownowadze
+github_username: "mlodzi-w-rownowadze"
+instagram_username: "mlodzi.w.rownowadze"
+facebook_username: "mlodzi.w.rownowadze"
+linkedin_username: "mlodzi-w-rownowadze"
+linktree_username: "mlodziwrownowadze"
+
 # Build settings
 markdown: kramdown
 permalink: /:year/:title:output_ext
